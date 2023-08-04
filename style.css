@@ -24,12 +24,14 @@ body {
     border: 2px solid blue;
 }
 
-
-
 .cell {
     flex: 1 1 auto;
 }
 
-.hovered {
+.initialColor {
     background-color: black;
+}
+
+.erased {
+    background-color: white;
 }
