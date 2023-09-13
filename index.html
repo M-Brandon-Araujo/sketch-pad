@@ -1,30 +1,44 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Sketch Pad</title>
+        <title>ETCH-A-SKETCH</title>
         <script src="script.js" defer></script>
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="title-container">
-            <h1>Sketch Pad</h1>
-        </div>
-        <div class="content-container">
+        <div class="main-container">
             <div class="toolbox">
-                <H3>COLOR PICKER</H3>
-                <input type="color" id="colorPicker" value="#000000">
-                <button class="button rainbow-btn">RAINBOW</button>
-                <button class="button eraser-btn">ERASER</button>
-                <h3>NEW CANVAS</h3>
-                <button class="button large-pen">LARGE</button>
-                <button class="button medium-pen">MEDIUM</button>
-                <button class="button small-pen">SMALL</button>
+                <div class="title-container">
+                    <div class="title">ETCH-A-SKETCH</div>
+                </div>
+                <div class="color-picker-container">
+                    <div class="color-picker-text">Choose Color</div>
+                    <input type="color" id="colorPicker" value="#000000">
+                </div>
+                <div class="tools-container">
+                    <button class="button rainbow-btn">Rainbow</button>
+                    <button class="button eraser-btn">Eraser</button>
+                    <div class="new-canvas-text-container">
+                        <div class="new-canvas-text">New Canvas</div>
+                    </div>
+                    <button class="button large-canvas">Large</button>
+                    <button class="button medium-canvas">Medium</button>
+                    <button class="button small-canvas">Small</button>
+                </div>
+                <div class="signature-container">
+                    <a href="https://github.com/M-Brandon-Araujo">© Brandon Araujo</a>
+                    <pre>|</pre>
+                    <a href="https://github.com/M-Brandon-Araujo/calculator">Source Code</a>
+                </div>
             </div>
             <div class="workspace">
                 <div class="canvas"></div>
             </div>
         </div>
-
     </body>
 </html>
