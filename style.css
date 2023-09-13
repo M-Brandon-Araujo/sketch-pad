@@ -1,14 +1,181 @@
-body {
-    display: flex;
-    flex-direction: column;
+html {
+    min-height: 100%;
 }
 
-.content-container {
+body {
+    height: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d7b1b0;
+    background: radial-gradient(ellipse farthest-corner at bottom left, #d4a1a1 0%, #070514 86%);
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-container {
+    display: flex;
+    width: 900px;
+    margin-top: 50px;
+    background-color: black;
+    padding: 20px;
+    border: solid rgb(93, 93, 93) 1px;
+    border-radius: 10px;
 }
 
 .toolbox {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    justify-content: space-between;
+    background-color: #211d1e;
+    border-right: solid black 20px;
+}
+
+
+.button {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    height: 30px;
+    width: 150px;
+    color: rgb(218, 218, 218);
+    border: none;
+    border-radius: 15px;
+    background-image: linear-gradient(to bottom left, #667b79, #211d1e);
+}
+
+.button:active {
+    animation-name: clicked;
+}
+
+.clicked {
+    animation-name: blur;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+}
+
+@keyframes blur {
+    0% {
+        filter: blur(2px);
+    }
+    10% {
+        filter: blur(2px);
+        border: solid rgb(142, 202, 189) 2px;
+        transform: rotate(-1.5deg) scale(1.02);
+    }
+    20% {
+        filter: blur(2px);
+        transform: rotate(1.5deg) scale(1);
+    }
+    30% {
+        filter: blur(2px);
+        border: solid rgb(142, 202, 189) 2px; 
+        transform: rotate(-1.3deg) scale(1.02);
+    }
+    40% {
+        filter: blur(2px);
+        transform: rotate(1.3deg) scale(1);
+    }
+    50% {
+        filter: blur(2px);
+        border: solid rgb(142, 202, 189) 2px; 
+        transform: rotate(-1.1deg) scale(1.02);
+    }
+    60% {
+        filter: blur(2px);
+        transform: rotate(1.1deg) scale(1);
+    }
+    70% {
+        filter: blur(2px);
+        border: solid rgb(142, 202, 189) 2px; 
+        transform: rotate(-1.05deg) scale(1.02);
+    }
+    80% {
+        filter: blur(2px);
+        transform: rotate(1.05deg) scale(1);
+    }
+    90% {
+        filter: blur(2px);
+        border: solid rgb(142, 202, 189) 2px; 
+        transform: rotate(-1.01deg) scale(1.02);
+    }
+    100% {
+        filter: blur(2px);
+    }
+}
+
+.button:hover {
+    border: solid rgb(142, 202, 189) 1px;
+    text-shadow: 1px 1px 8px rgb(142, 202, 189);
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    background-color: black;
+    padding: 20px;
+}
+
+.color-picker-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+
+.color-picker-text {
+    color: white;
+}
+
+.tools-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.new-canvas-text-container {
+    display: flex;
+    width: 80%;
+    border-bottom: solid grey 1px;
+    justify-content: center;
+}
+
+.new-canvas-text {
+    color: white;
+}
+
+.signature-container {
+    padding: 20px 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.signature {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}
+
+pre {
+    color: white;
 }
 
 .workspace {
@@ -20,8 +187,7 @@ body {
     height: 600px;
     width: 600px;
     flex-wrap: wrap;
-    background-color: white;
-    border: 2px solid blue;
+    background-color: #ffffff;
 }
 
 .cell {
@@ -33,5 +199,5 @@ body {
 }
 
 .erased {
-    background-color: white;
+    background-color: #ffffff;
 }
